@@ -36,7 +36,7 @@
 
     - Records -> Individual Enteries in a table
 
-#### CRUD -> Create, Read, Update, Delete
+#### CRUD -> Create, Read, Update,
 
 ### MySQl Data-types:
 
@@ -49,3 +49,56 @@
 7. BLOB: Binary Object used to save Audio, Video and images
 8. MEDIUMBLOB: 0-1.7GB
 9. LONGBLOB: 0-400GB
+
+
+MySQL Commands
+
+Display the list of all databases
+	SHOW DATABASES;
+
+Create a new MySQL database
+CREATE DATABASE <name_of_database>;
+
+Use / access a database
+ USE <name_of_database>;
+
+List all tables inside the database
+SHOW TABLES;
+
+Delete a database
+DROP DATABASE <name_of_database>;
+
+Create table inside a database
+CREATE TABLE student(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(20), email_id VARCHAR(20));
+
+Fetch the description of a table
+ DESCRIBE <name_of_table>;
+
+Fetch all the data’s from a MySQL table
+ SELECT * FROM <name_of_table>;
+
+Insert data into a MySQL table
+INSERT INTO student(name, email_id) VALUES('suman gangopadhyay', 'suman@guvi.in');
+
+Insert multiple data into your MySQL table
+INSERT INTO student(name, email_id) VALUES('hariom shukla', 'hari@example.com'), ('lakshmi', 'lakshmi@example.com');
+
+Update a record in a MySQL table
+UPDATE student SET email_id='lakshmi@guvi.in' WHERE id=3;
+
+
+Update multiple columns in a single record
+UPDATE student SET name='venkat', email_id='venkat@example.com' WHERE id=6;
+
+
+Delete a record from a MySQL table
+DELETE FROM student WHERE id=1;
+
+
+Delete all records from a MySQL table;
+DELETE FROM student;
+
+MySQL WHERE Clause
+SELECT CustomerID, CompanyName, City, Country FROM customers WHERE Country="Mexico";
+
+SELECT CustomerID, CompanyName, City, Country FROM customers WHERE Country="Mexico" AND Country="USA";
